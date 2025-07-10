@@ -1,0 +1,82 @@
+/* Modern Dark Theme Variables */
+:root {
+  --background: #18181b;
+  --surface: #23232a;
+  --surface-alt: #23232aee;
+  --primary: #d4d4d4;
+  --primary-hover: #e5e5e5;
+  --accent: #06b6d4;
+  --text: #f3f4f6;
+  --text-secondary: #a1a1aa;
+  --border: #27272a;
+  --shadow: 0 4px 32px 0 #000a;
+  --radius: 18px;
+  --transition: 0.2s cubic-bezier(.4,0,.2,1);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  transition: background var(--transition), color var(--transition), border-color var(--transition);
+}
+
+body {
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--text);
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 80px;
+}
+
+.container {
+  width: 860px;
+  max-width: 95%;
+  margin: auto;
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 32px 24px;
+}
+
+h1, h2 {
+  color: var(--primary);
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+hr {
+  margin: 24px auto;
+  border: none;
+  border-top: 1px solid var(--border);
+}
+img {
+  max-width: 100%;
+  margin-bottom: 24px;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 12px #0004;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  background: var(--surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 8px;
+}

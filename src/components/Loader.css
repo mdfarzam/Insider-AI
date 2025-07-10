@@ -1,0 +1,20 @@
+/* Modern Neon Loader for Dark UI */
+.loader {
+  margin: auto;
+  width: 24px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 var(--primary);
+  background: var(--primary);
+  animation: neon-glow 1s infinite alternate, l5 1s infinite linear alternate;
+}
+@keyframes neon-glow {
+  0% { box-shadow: 0 0 0 0 var(--primary); }
+  100% { box-shadow: 0 0 16px 8px var(--accent); }
+}
+@keyframes l5 {
+  0%  {box-shadow: 20px 0 var(--primary), -20px 0 #0002;background: var(--primary) }
+  33% {box-shadow: 20px 0 var(--primary), -20px 0 #0002;background: #0002}
+  66% {box-shadow: 20px 0 #0002,-20px 0 var(--primary); background: #0002}
+  100%{box-shadow: 20px 0 #0002,-20px 0 var(--primary); background: var(--primary) }
+}
