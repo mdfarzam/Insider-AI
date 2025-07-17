@@ -3,7 +3,7 @@ import './Chat.css'
 import { useState } from 'react'
 
 function Chat({file}) {
-    const genAI = new GoogleGenerativeAI("AIzaSyA5wRQ-Bwmg4hYP8fqPJrcayVB_PgSaLa0");
+    const genAI = new GoogleGenerativeAI( //your api key );
     const model = genAI.getGenerativeModel({ model: 'models/gemini-pro' });
     const [messages, setMessages] = useState([]);
     const [input, setInput] = useState("");
